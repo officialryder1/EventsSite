@@ -17,6 +17,9 @@ from baton.autodiscover import admin
 from django.contrib import admin
 from django.contrib.auth import authenticate
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('baton/', include('baton.urls')),
@@ -25,3 +28,5 @@ urlpatterns = [
     path('members', include('member.urls')),
     path('', include('event.urls')),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
