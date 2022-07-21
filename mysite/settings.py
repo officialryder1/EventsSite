@@ -33,14 +33,12 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'baton',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'baton.autodiscover',
     'event',
     'member'
 
@@ -127,15 +125,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#Baton setting
-
-BATON = {
-    'SITE_HEADER': 'Baton',
-    'SITE_TITLE': 'Baton',
-    'INDEX_TITLE': 'Site.adminstration',
-}
-
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
