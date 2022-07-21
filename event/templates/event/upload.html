@@ -1,0 +1,16 @@
+{% extends 'event/base.html' %}
+{% block content%}
+
+<div class="container">
+    {% if user.is_authenticated %}
+    <h1 class="lead">{{request.user}}! Upload Your Event</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Upload</button>
+    </form>
+    {% else%}
+        <p class="lead">Oops! Sorry Must be Loggin to View this Page</p>
+    {% endif %}
+</div>
+{% endblock %}
