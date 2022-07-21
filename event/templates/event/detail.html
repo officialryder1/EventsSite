@@ -19,7 +19,7 @@
             <b class="lead" style="font-size: small; padding-right:350px ;">Author: {{post.author}}</b>
             <i class="lead" style="font-size: small;">{{post.category}}</i><br>
             {% if post.author == request.user%}
-            <a href="{% url 'update' post.id %}"> Edit</a> | <a href="{% url 'delete' post.id %}">Delete</a>
+            <a href="{% url 'update' post.id %}"> Edit</a> | <a href="{% url 'delete-post' post.id %}">Delete</a>
             {% endif %}
         </div>
     </div>

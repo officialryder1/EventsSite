@@ -50,21 +50,14 @@ def update(request, pk):
     context = {'form':form}
     return render(request, 'event/upload.html', context)
 
-# def delete(request, pk):
-#    todo = Post.objects.get(id=pk)
-#    todo.delete()
-#    return redirect('home')
+def delete_message(request, pk):
+    todo = Post.objects.get(id=pk)
+    return render(request, 'event/delete.html', {'todo':todo})
 
 def delete(request, pk):
-    todo = Post.objects.get(id=pk)
-    yes = False
-    if yes:
-        return render(request, 'event/delete.html', {'todo':todo})
-    else:
-        yes = True
-        todo.delete()
-        return redirect('home')
-    
+   todo = Post.objects.get(id=pk)
+   todo.delete()
+   return redirect('home')
 
 def search(request):
     post_tag = Post.objects.filter()[:8]
