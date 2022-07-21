@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post, Category
+from .models import Post
 from .form import AddPost
 
 def index(request):
