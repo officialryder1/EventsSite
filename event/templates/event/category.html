@@ -25,7 +25,8 @@
                             <p class="card-text"> {{post.description}}.</p>
                             <p class="lead">Location: {{post.location}} | Date: {{post.date}}</p>
                             <b class="lead" style="font-size: small; padding-right:350px ;">Author: {{post.author}}</b>
-                            <i class="lead" style="font-size: small;">{{post.category}}</i>
+                            <i class="lead" style="font-size: small;">{{post.category}}</i><br>
+                            <a href="{% url 'detail' post.id%}"><small>more</small></a>
                         </div>
                     </div>
                 </div>
