@@ -5,7 +5,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField()
-    category = models.CharField(max_length=100, default='Uncategories')
+    category = models.CharField(max_length=100, null=True, blank=True)
     location = models.CharField(max_length=100)
     date = models.DateTimeField()
 
