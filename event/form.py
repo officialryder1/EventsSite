@@ -10,10 +10,10 @@ from .models import Post, Category
 
 # for item in choices:
 #     choice_list.append(item)
-try:
-    cat_choices = Category.objects.all().values_list('name','name')
-except (OperationalError, ProgrammingError) as e:
-    cat_choices=[]
+# try:
+#     cat_choices = Category.objects.all().values_list('name','name')
+# except (OperationalError, ProgrammingError) as e:
+#     cat_choices=[]
 
 class AddPost(forms.ModelForm):
 
@@ -26,7 +26,7 @@ class AddPost(forms.ModelForm):
             'title': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Event Title'}),
             'author': forms.Select(attrs={'class':'form-control', 'placeholder':'Author'}),
             'description':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Description'}),
-            'category':forms.Select(choices=cat_choices, attrs={'class':'form-control', 'placeholder':'Category'}),
+            'category':forms.Select(attrs={'class':'form-control', 'placeholder':'Category'}),
             'location':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Location'}),
             'date':forms.SelectDateWidget(attrs={'class':'form-control', 'placeholder':'Date'})
         }
