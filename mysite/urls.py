@@ -22,9 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('members', include('django.contrib.auth.urls')),
-    path('members', include('member.urls')),
-    path('', include('event.urls')),
+    # path('members', include('django.contrib.auth.urls')),
+    # path('members', include('member.urls')),
+    # path('', include('event.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
