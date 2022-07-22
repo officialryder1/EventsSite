@@ -20,10 +20,11 @@ class AddPost(forms.ModelForm):
     
     class Meta:
         model = Post
-        fields = ('title', 'description', 'category', 'location', 'date')
+        fields = ('title', 'author', 'description', 'category', 'location', 'date')
     
         widgets = {
             'title': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Event Title'}),
+            'author':forms.Select(attrs={'class':'form-control', 'placeholder':'Author'}),
             'description':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Description'}),
             'category':forms.Select(attrs={'class':'form-control', 'placeholder':'Category'}),
             'location':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Location'}),
