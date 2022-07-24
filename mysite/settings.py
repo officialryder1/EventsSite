@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Event',
-        'USER': 'postgres',
-        'PASSWORD': 'testing321',
+        'NAME': 'd1ci87oak3vner',
+        'USER': 'emtneombhwembf',
+        'PASSWORD': '54eda3d14a11eee271692b1a435557674fad8b46b8a1633ada41556c36962862',
         'PORT': '5432',
-        'HOST': 'localhost'
+        'HOST': 'ec2-23-23-151-191.compute-1.amazonaws.com'
     }
 }
 import dj_database_url
